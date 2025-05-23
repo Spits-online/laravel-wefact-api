@@ -1,0 +1,59 @@
+{
+    "name": "spits-online/laravel-wefact-api",
+    "description": "A Laravel wrapper for the HostFact / WeFact API",
+    "keywords": [
+        "spits",
+        "api",
+        "laravel",
+        "hostfact",
+        "wefact",
+        "laravel-wefact-api"
+    ],
+    "version": "1.0.0",
+    "homepage": "https://github.com/Spits-online/laravel-wefact-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WebApps Spits",
+            "email": "webapps@spits.online",
+            "homepage": "https://spits.online",
+            "role": "Back-end developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "laravel/framework": "~5.8.0|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "php-coveralls/php-coveralls": "^2.4",
+        "orchestra/testbench": "~3.8.0|^4.0|^5.0|^6.0",
+        "phpunit/phpunit": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spits\\WeFactApi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spits\\WeFactApi\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spits\\WeFactApi\\WeFactApiServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
