@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-composer require spits-online/larave-wefact-api
+composer require spits-online/laravel-wefact-api
 php artisan vendor:publish --provider="Spits\WeFactApi\WeFactApiServiceProvider"
 ```
 
