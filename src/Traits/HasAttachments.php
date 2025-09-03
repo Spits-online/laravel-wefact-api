@@ -38,7 +38,7 @@ trait HasAttachments
      * @throws \JsonException
      * @throws \Spits\WeFactApi\Exceptions\ApiException
      */
-    public function addAttachement(string $fileName, string $base64): HasAttachments
+    public function addAttachment(string $fileName, string $base64): HasAttachments
     {
         $res = $this->request([
             'controller' => 'attachment',

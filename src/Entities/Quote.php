@@ -62,4 +62,28 @@ class Quote extends BaseEntity
 
         return $this;
     }
+
+    public function accept()
+    {
+        $res = $this->request([
+            'controller' => $this->controller,
+            'action' => 'accept',
+            'PriceQuoteCode' => $this->PriceQuoteCode,
+        ]);
+
+        $this->set($res[$this->controller]);
+        return $this;
+    }
+
+    public function decline()
+    {
+        $res = $this->request([
+            'controller' => $this->controller,
+            'action' => 'decline',
+            'PriceQuoteCode' => $this->PriceQuoteCode,
+        ]);
+
+        $this->set($res[$this->controller]);
+        return $this;
+    }
 }

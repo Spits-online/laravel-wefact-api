@@ -5,6 +5,7 @@ namespace Spits\WeFactApi;
 use Spits\WeFactApi\Entities\CreditInvoice;
 use Spits\WeFactApi\Entities\Creditor;
 use Spits\WeFactApi\Entities\Debtor;
+use Spits\WeFactApi\Entities\Domain;
 use Spits\WeFactApi\Entities\DomainContact;
 use Spits\WeFactApi\Entities\Group;
 use Spits\WeFactApi\Entities\Hosting;
@@ -47,6 +48,16 @@ class HostFact
     public static function debtor(int $Identifier = null): Debtor
     {
         return new Debtor($Identifier);
+    }
+
+    /**
+     * @throws \Spits\WeFactApi\Exceptions\ApiException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \JsonException
+     */
+    public static function domain(int $Identifier = null): Domain
+    {
+        return new Domain($Identifier);
     }
 
     /**
