@@ -63,18 +63,18 @@ $debtor->create([
 Alternatively the Wefact Facada may be used to instantiate the Entites as listed below.
 #### Debtor
 
-#### CreditInvoice
-
-```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::creditInvoice(1);
-```
-
 #### Creditor
 
 ```php
 use Spits\WeFactApi\Facades\WeFact;
 WeFact::creditor(1);
+```
+
+#### CreditInvoice
+
+```php
+use Spits\WeFactApi\Facades\WeFact;
+WeFact::creditInvoice(1);
 ```
 
 #### Debtor
@@ -84,32 +84,11 @@ use Spits\WeFactApi\Facades\WeFact;
 WeFact::debtor(1);
 ```
 
-#### Domain
-
-```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::domain(1);
-```
-
-#### DomainContact
-
-```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::domainContact(1);
-```
-
 #### Group
 
 ```php
 use Spits\WeFactApi\Facades\WeFact;
 WeFact::group(1);
-```
-
-#### Hosting
-
-```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::hosting(1);
 ```
 
 #### Invoice
@@ -140,13 +119,6 @@ use Spits\WeFactApi\Facades\WeFact;
 WeFact::service(1);
 ```
 
-#### Ssl
-
-```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::ssl(1);
-```
-
 #### Subscription
 
 ```php
@@ -161,9 +133,11 @@ use Spits\WeFactApi\Facades\WeFact;
 WeFact::ticket(1);
 ```
 
-#### Vps
-
-```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::vps(1);
-```
+## HostFact only Entities
+Since WeFact doesn't support domain management a few of the entities are only to be used in combination with HostFact.\
+These entities are listed below:
+- `Entities\Domain`
+- `Entities\DomainContract`
+- `Entities\Hosting`
+- `Entities\Ssl`
+- `Entities\Vps`
