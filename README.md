@@ -35,8 +35,32 @@ Each method supports default:
 
 Additional methods will be documented on the component.
 
-When passing the Identifier to the constructor, the object will automatically bind all the values to the class instance.
+To start using the functionalities a new Entity must be instantiated.
+```php
+use Spits\WeFactApi\Entities\Debtor;
 
+$debtor = new Debtor();
+```
+Optionally an $Identifier parameter may be provided.
+When doing so automatically a `show` object call will be made to the API retrieving the objects data from WeFact.
+After this you can use the supported methods
+```php
+//For the full fields list check WeFact documentation
+$debtor->create([
+    'Intials'           => $requestData['Initials'],
+    'CompanyName'       => $requestData['CompanyName'],
+    'EmailAddress'      => $requestData['EmailAddress'],
+    'PhoneNumber'       => $requestData['PhoneNumber'],
+    'Address'           => $requestData['Address'],
+    'ZipCode'           => $requestData['ZipCode'],
+    'City'              => $requestData['City'],
+    'InvoiceAddress'    => $requestData['InvoiceAddress'],
+]);
+```
+
+
+
+Alternatively the Wefact Facada may be used to instantiate the Entites as listed below.
 #### Debtor
 
 #### CreditInvoice
