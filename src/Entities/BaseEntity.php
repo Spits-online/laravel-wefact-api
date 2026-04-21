@@ -31,7 +31,7 @@ abstract class BaseEntity
      * @throws \JsonException
      * @throws \Spits\WeFactApi\Exceptions\ApiException
      */
-    public function __construct(int $Identifier = null) {
+    public function __construct(?int $Identifier = null) {
         $this->client = new Client(config('wefact.client'));
 
         if ($Identifier) {
