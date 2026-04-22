@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-composer require spits-online/larave-wefact-api
+composer require spits-online/laravel-wefact-api
 php artisan vendor:publish --provider="Spits\WeFactApi\WeFactApiServiceProvider"
 ```
 
@@ -132,6 +132,13 @@ WeFact::subscription(1);
 use Spits\WeFactApi\Facades\WeFact;
 WeFact::ticket(1);
 ```
+#### Vps
+
+```php
+use Spits\WeFactApi\Facades\WeFact;
+WeFact::vps(1);
+```
+
 
 ## HostFact only Entities
 Since WeFact doesn't support domain management a few of the entities are only to be used in combination with HostFact.\
