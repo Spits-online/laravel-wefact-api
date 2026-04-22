@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Laravel 13 compatibility
+
+### Fixed
+- `src\Entities\BaseEntity` constructor: use explicit nullable type `?int $Identifier = null` (PHP 8.4 deprecation)
+- `src\HostFact` static factory methods: use explicit nullable type `?int $Identifier = null` (PHP 8.4 deprecation)
+- `composer.json`: corrected `phpunit/phpunit` constraint (`12.5` → `^12.0`)
+
 ## [1.0.1] - 2025-09-03
 
 ### Added 

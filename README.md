@@ -35,22 +35,46 @@ Each method supports default:
 
 Additional methods will be documented on the component.
 
-When passing the Identifier to the constructor, the object will automatically bind all the values to the class instance.
-
-#### Debtor
-
-#### CreditInvoice
-
+To start using the functionalities a new Entity must be instantiated.
 ```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::creditInvoice(1);
+use Spits\WeFactApi\Entities\Debtor;
+
+$debtor = new Debtor();
 ```
+Optionally an $Identifier parameter may be provided.
+When doing so automatically a `show` object call will be made to the API retrieving the objects data from WeFact.
+After this you can use the supported methods
+```php
+//For the full fields list check WeFact documentation
+$debtor->create([
+    'Intials'           => $requestData['Initials'],
+    'CompanyName'       => $requestData['CompanyName'],
+    'EmailAddress'      => $requestData['EmailAddress'],
+    'PhoneNumber'       => $requestData['PhoneNumber'],
+    'Address'           => $requestData['Address'],
+    'ZipCode'           => $requestData['ZipCode'],
+    'City'              => $requestData['City'],
+    'InvoiceAddress'    => $requestData['InvoiceAddress'],
+]);
+```
+
+
+
+Alternatively the Wefact Facada may be used to instantiate the Entites as listed below.
+#### Debtor
 
 #### Creditor
 
 ```php
 use Spits\WeFactApi\Facades\WeFact;
 WeFact::creditor(1);
+```
+
+#### CreditInvoice
+
+```php
+use Spits\WeFactApi\Facades\WeFact;
+WeFact::creditInvoice(1);
 ```
 
 #### Debtor
@@ -60,32 +84,11 @@ use Spits\WeFactApi\Facades\WeFact;
 WeFact::debtor(1);
 ```
 
-#### Domain
-
-```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::domain(1);
-```
-
-#### DomainContact
-
-```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::domainContact(1);
-```
-
 #### Group
 
 ```php
 use Spits\WeFactApi\Facades\WeFact;
 WeFact::group(1);
-```
-
-#### Hosting
-
-```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::hosting(1);
 ```
 
 #### Invoice
@@ -116,13 +119,6 @@ use Spits\WeFactApi\Facades\WeFact;
 WeFact::service(1);
 ```
 
-#### Ssl
-
-```php
-use Spits\WeFactApi\Facades\WeFact;
-WeFact::ssl(1);
-```
-
 #### Subscription
 
 ```php
@@ -136,10 +132,19 @@ WeFact::subscription(1);
 use Spits\WeFactApi\Facades\WeFact;
 WeFact::ticket(1);
 ```
-
 #### Vps
 
 ```php
 use Spits\WeFactApi\Facades\WeFact;
 WeFact::vps(1);
 ```
+
+
+## HostFact only Entities
+Since WeFact doesn't support domain management a few of the entities are only to be used in combination with HostFact.\
+These entities are listed below:
+- `Entities\Domain`
+- `Entities\DomainContract`
+- `Entities\Hosting`
+- `Entities\Ssl`
+- `Entities\Vps`

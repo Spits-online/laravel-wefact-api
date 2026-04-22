@@ -25,7 +25,7 @@ class HostFact
      * @throws \Spits\WeFactApi\Exceptions\ApiException
      * @throws \JsonException
      */
-    public static function creditor(int $Identifier = null): Creditor
+    public static function creditor(?int $Identifier = null): Creditor
     {
         return new Creditor($Identifier);
     }
@@ -35,7 +35,7 @@ class HostFact
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
      */
-    public static function creditInvoice(int $Identifier = null): CreditInvoice
+    public static function creditInvoice(?int $Identifier = null): CreditInvoice
     {
         return new CreditInvoice($Identifier);
     }
@@ -45,7 +45,7 @@ class HostFact
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
      */
-    public static function debtor(int $Identifier = null): Debtor
+    public static function debtor(?int $Identifier = null): Debtor
     {
         return new Debtor($Identifier);
     }
@@ -55,7 +55,7 @@ class HostFact
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
      */
-    public static function domain(int $Identifier = null): Domain
+    public static function domain(?int $Identifier = null): Domain
     {
         return new Domain($Identifier);
     }
@@ -65,7 +65,7 @@ class HostFact
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
      */
-    public static function domainContact(int $Identifier = null): DomainContact
+    public static function domainContact(?int $Identifier = null): DomainContact
     {
         return new DomainContact($Identifier);
     }
@@ -75,7 +75,7 @@ class HostFact
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
      */
-    public static function group(int $Identifier = null): Group
+    public static function group(?int $Identifier = null): Group
     {
         return new Group($Identifier);
     }
@@ -85,7 +85,7 @@ class HostFact
      * @throws \Spits\WeFactApi\Exceptions\ApiException
      * @throws \JsonException
      */
-    public static function hosting(int $Identifier = null): Hosting
+    public static function hosting(?int $Identifier = null): Hosting
     {
         return new Hosting($Identifier);
     }
@@ -95,7 +95,7 @@ class HostFact
      * @throws \Spits\WeFactApi\Exceptions\ApiException
      * @throws \JsonException
      */
-    public static function invoice(int $Identifier = null): Invoice
+    public static function invoice(?int $Identifier = null): Invoice
     {
         return new Invoice($Identifier);
     }
@@ -105,7 +105,7 @@ class HostFact
      * @throws \Spits\WeFactApi\Exceptions\ApiException
      * @throws \JsonException
      */
-    public static function product(int $Identifier = null): Product
+    public static function product(?int $Identifier = null): Product
     {
         return new Product($Identifier);
     }
@@ -115,7 +115,7 @@ class HostFact
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
      */
-    public static function quote(int $Identifier = null): Quote
+    public static function quote(?int $Identifier = null): Quote
     {
         return new Quote($Identifier);
     }
@@ -125,7 +125,7 @@ class HostFact
      * @throws \Spits\WeFactApi\Exceptions\ApiException
      * @throws \JsonException
      */
-    public static function service(int $Identifier = null): Service
+    public static function service(?int $Identifier = null): Service
     {
         return new Service($Identifier);
     }
@@ -135,7 +135,7 @@ class HostFact
      * @throws \Spits\WeFactApi\Exceptions\ApiException
      * @throws \JsonException
      */
-    public static function ssl(int $Identifier = null): Ssl
+    public static function ssl(?int $Identifier = null): Ssl
     {
         return new Ssl($Identifier);
     }
@@ -145,7 +145,7 @@ class HostFact
      * @throws \Spits\WeFactApi\Exceptions\ApiException
      * @throws \JsonException
      */
-    public static function subscription(int $Identifier = null): Subscription
+    public static function subscription(?int $Identifier = null): Subscription
     {
         return new Subscription($Identifier);
     }
@@ -155,7 +155,7 @@ class HostFact
      * @throws \Spits\WeFactApi\Exceptions\ApiException
      * @throws \JsonException
      */
-    public static function ticket(int $Identifier = null): Ticket
+    public static function ticket(?int $Identifier = null): Ticket
     {
         return new Ticket($Identifier);
     }
@@ -165,7 +165,7 @@ class HostFact
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \JsonException
      */
-    public static function vps(int $Identifier = null): Vps
+    public static function vps(?int $Identifier = null): Vps
     {
         return new Vps($Identifier);
     }
